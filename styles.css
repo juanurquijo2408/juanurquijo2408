@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 3.5em;
+}
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 2.5em;
+}
+p {
+  font-size: 1.5em;
+}
+ul {
+  list-style: disc;
+}
+span {
+  font-weight: 700;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+button {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: rgba(0, 0, 117, 0.89);
+}
+
+button:hover {
+  background-color: rgb(101, 33, 165);
+}
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+}
+header .nombreNav {
+  margin: 0;
+  padding: 25px 30px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(0, 0, 117, 0.89);
+  font-size: 3vw;
+}
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+header a {
+  font-size: 2vw;
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(0, 0, 117, 0.89);
+}
+header a:hover {
+  color: blueviolet;
+}
+.headerButton {
+  display: none;
+}
+img#gitHub,
+img#linkedIn {
+  width: 25px;
+  height: 25px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url(images/backHero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero h1 {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 7vw;
+}
+.hero p {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 4vw;
+}
+.hero button {
+  font-size: 3vw;
+}
+#acercaDeMi {
+  margin: 25px 0px;
+  height: 100vh;
+}
+#acercaDeMi .container {
+  text-align: center;
+  padding: 50px 12px 2.5px 12px;
+}
+#acercaDeMi .texto {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3vw;
+}
+#acercaDeMi .mern {
+  background-image: url(images/MERN-logo.png);
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#experiencia {
+  margin: 25px 0px;
+}
+#experiencia .container {
+  padding: 50px 12px 2.5px 12px;
+  height: 100vh;
+  text-align: left;
+}
+#experiencia h2 {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  text-align: center;
+  font-size: 5vw;
+}
+#experiencia li {
+  padding: 15px 0px 0px 0px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  text-align: left;
+  font-size: 2.5vw;
+}
+#contacto .container {
+  height: 80%;
+  padding: 50px 12px 2.5px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#contacto h3 {
+  margin: 0;
+  color: white;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  font-size: 5vw;
+}
+#contacto form {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+
+  padding: 30px 25px;
+  border-radius: 25px;
+  background-color: rgba(56, 56, 215, 0.667);
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  font-size: 3vw;
+}
+#contacto label {
+  margin: 0;
+  margin-bottom: 5px;
+}
+textarea,
+#email,
+#name,
+#userContact {
+  margin: 5px 0px 5px 0px;
+}
+#enviar {
+  margin-top: 10px;
+  font-size: 3vw;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: rgba(0, 0, 117, 0.89);
+}
+#enviar:hover {
+  background-color: rgb(101, 33, 165);
+}
+.formButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(45, 62, 80, 255);
+  color: white;
+}
+footer p {
+  margin: 0;
+}
+.container1 {
+  height: 30%;
+  margin: 15px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: solid 1px white;
+}
+.container2 {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.5vw;
+  height: 60%;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container3 {
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 2vw;
+  height: 10%;
+  display: flex;
+  justify-content: end;
+  padding-right: 5px;
+  border-top: solid 1px white;
+}
+footer a {
+  padding: 0px 15px;
+}
+@media (min-width: 720px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+  }
+  .headerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: inherit;
+  }
+  header .nombreNav {
+    font-size: 1.6em;
+  }
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 30px;
+    align-items: center;
+  }
+  header button {
+    font-size: 1em;
+  }
+  header a {
+    font-size: 1em;
+  }
+  .hero {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+      url(images/backHero.png);
+  }
+  .hero .heroContainer {
+    text-align: center;
+    width: 100%;
+    padding: 10vh 40vw 0px 0vw;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  .hero p {
+    font-size: 1.5em;
+  }
+  .hero button {
+    font-size: 1em;
+    align-items: flex-end;
+  }
+  #acercaDeMi .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #acercaDeMi .texto {
+    width: 100%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.7em;
+  }
+  #acercaDeMi .fotoPerfil {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url(images/fotoPerfil.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+  }
+  #experiencia .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  #experiencia h2 {
+    width: 100%;
+    max-width: 600px;
+    text-align: right;
+    font-style: italic;
+    color: rgba(0, 0, 117, 0.89);
+    padding-right: 5px;
+    font-size: 2em;
+  }
+  #experiencia ul {
+    width: 100%;
+  }
+  #experiencia li {
+    text-align: left;
+    padding-left: 5px;
+    font-size: 1em;
+  }
+  #contacto h3 {
+    font-size: 2em;
+  }
+  #contacto form,
+  #contacto #enviar {
+    font-size: 1em;
+  }
+  footer .container2 {
+    font-size: 0.7em;
+  }
+  footer .container3 {
+    font-size: 0.7em;
+  }
+}
