@@ -6,6 +6,7 @@ document
   .getElementById("añadirExperiencia")
   .addEventListener("click", function () {
     let experienciaNueva = prompt("Digita la nueva experiencia");
+
     if (experienciaNueva) {
       let ul = document.getElementById("listaExperiencia");
       let li = document.createElement("li");
@@ -17,6 +18,7 @@ document
 
 document.getElementById("contactar").addEventListener("click", function () {
   let email = prompt("Ingresa tu correo");
+
   if (email) {
     alert("Gracias " + email + " me pondré en contacto contigo pronto!");
   }
@@ -25,6 +27,7 @@ document.getElementById("contactar").addEventListener("click", function () {
 const estudios = ["A", "B", "C"];
 function mostrarEstudios() {
   let ul = document.getElementById("listaEstudios");
+
   for (let i = 0; i < estudios.length; i++) {
     let li = document.createElement("li");
     li.textContent = estudios[i];
@@ -42,12 +45,10 @@ document.getElementById("verProyectos").addEventListener("click", function () {
   let numProyecto = prompt("Cuantos proyectos desea ver? (Max 5)");
   let ul = document.getElementById("proyectosAnteriores");
   numProyecto = parseInt(numProyecto, 10);
-  let ul = document.getElementById("proyectosAnteriores");
-  let liElements = ul.getElementsByTagName("li");
+  let liBorrar = ul.getElementsByTagName("li");
 
-  // Eliminar cada elemento li de la lista
-  while (liElements.length > 0) {
-    ul.removeChild(liElements[0]);
+  while (liBorrar.length > 0) {
+    ul.removeChild(liBorrar[0]);
   }
 
   if (!isNaN(numProyecto)) {
@@ -64,3 +65,21 @@ document.getElementById("verProyectos").addEventListener("click", function () {
     alert("El valor debe ser un número");
   }
 });
+
+function nuevaHabilidad() {
+  let habilidad = prompt("Introduce una nueva habilidad");
+
+  if (habilidad) {
+    let ul = document.getElementById("habilidades");
+    let li = document.createElement("li");
+    li.textContent = habilidad;
+    ul.appendChild(li);
+  }
+}
+document
+  .getElementById("añadirHabilidad")
+  .addEventListener("click", nuevaHabilidad);
+
+function saludo() {
+  alert("¡Gracias por visitar mi sección de experiencia laboral!");
+}
