@@ -1,7 +1,5 @@
 console.log("Hoja de vida interactiva cargada");
 
-window.onload = mostrarEstudios;
-
 const experienciaButton = () => {
   let experienciaNueva = prompt("Digita la nueva experiencia");
 
@@ -96,3 +94,5 @@ document
   .addEventListener("click", nuevaHabilidad);
 
 window.onload = saludo;
+
+window.onload = mostrarEstudios;
