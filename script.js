@@ -2,30 +2,27 @@ console.log("Hoja de vida interactiva cargada");
 
 window.onload = mostrarEstudios;
 
-document
-  .getElementById("añadirExperiencia")
-  .addEventListener("click", function () {
-    let experienciaNueva = prompt("Digita la nueva experiencia");
+const experienciaButton = () => {
+  let experienciaNueva = prompt("Digita la nueva experiencia");
 
-    if (experienciaNueva) {
-      let ul = document.getElementById("listaExperiencia");
-      let li = document.createElement("li");
-      li.textContent = experienciaNueva;
-      ul.appendChild(li);
-      console.log(experienciaNueva);
-    }
-  });
+  if (experienciaNueva) {
+    let ul = document.getElementById("listaExperiencia");
+    let li = document.createElement("li");
+    li.textContent = experienciaNueva;
+    ul.appendChild(li);
+    console.log(experienciaNueva);
+  }
+};
 
-document.getElementById("contactar").addEventListener("click", function () {
+const contacto = () => {
   let email = prompt("Ingresa tu correo");
 
   if (email) {
     alert("Gracias " + email + " me pondré en contacto contigo pronto!");
   }
-});
+};
 
-const estudios = ["A", "B", "C"];
-function mostrarEstudios() {
+const mostrarEstudios = () => {
   let ul = document.getElementById("listaEstudios");
 
   for (let i = 0; i < estudios.length; i++) {
@@ -33,15 +30,9 @@ function mostrarEstudios() {
     li.textContent = estudios[i];
     ul.appendChild(li);
   }
-}
-const proyectos = [
-  "Proyecto1",
-  "Proyecto2",
-  "Proyecto3",
-  "Proyecto4",
-  "Proyecto5",
-];
-document.getElementById("verProyectos").addEventListener("click", function () {
+};
+
+const proyectosButton = () => {
   let numProyecto = prompt("Cuantos proyectos desea ver? (Max 5)");
   let ul = document.getElementById("proyectosAnteriores");
   numProyecto = parseInt(numProyecto, 10);
@@ -64,9 +55,9 @@ document.getElementById("verProyectos").addEventListener("click", function () {
   } else {
     alert("El valor debe ser un número");
   }
-});
+};
 
-function nuevaHabilidad() {
+const nuevaHabilidad = () => {
   let habilidad = prompt("Introduce una nueva habilidad");
 
   if (habilidad) {
@@ -75,11 +66,33 @@ function nuevaHabilidad() {
     li.textContent = habilidad;
     ul.appendChild(li);
   }
-}
+};
+
+const saludo = () => {
+  alert("Bienvenido a esta página proyecto");
+};
+
+document
+  .getElementById("añadirExperiencia")
+  .addEventListener("click", experienciaButton);
+
+document.getElementById("contactar").addEventListener("click", contacto);
+
+const estudios = ["A", "B", "C"];
+
+const proyectos = [
+  "Proyecto1",
+  "Proyecto2",
+  "Proyecto3",
+  "Proyecto4",
+  "Proyecto5",
+];
+document
+  .getElementById("verProyectos")
+  .addEventListener("click", proyectosButton);
+
 document
   .getElementById("añadirHabilidad")
   .addEventListener("click", nuevaHabilidad);
 
-function saludo() {
-  alert("¡Gracias por visitar mi sección de experiencia laboral!");
-}
+window.onload = saludo;
